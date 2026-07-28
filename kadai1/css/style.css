@@ -1,0 +1,256 @@
+/* ===================================================
+   色彩設計（カラーパレット）
+   ・メインカラー : #1e3a8a（深みのあるネイビー）
+   ・サブカラー   : #2563eb（ロイヤルブルー）
+   ・アクセント   : #38bdf8（ライトスカイブルー）
+   ・背景色       : #f8fafc（清潔感のあるソフトグレー）
+   ・カード背景   : #ffffff（純白）
+   =================================================== */
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* ヘッダーデザイン */
+header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    color: #ffffff;
+    padding: 30px 20px 20px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0 0 18px 0;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* ナビゲーションバー */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* 現在地アクティブ表示 */
+nav a.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+
+/* メインコンテンツエリア */
+main {
+    max-width: 920px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+/* 見出しスタイル */
+h2 {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 5px solid #2563eb;
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    color: #334155;
+    font-size: 1.15rem;
+    margin-top: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+/* --- 【a.html】トップページカードレイアウト --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 22px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* --- 【b.html】プロフィール＆筋トレスケジュール --- */
+.profile-card {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffffff;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 12px 0;
+}
+
+dt {
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+dd {
+    margin: 0;
+    color: #475569;
+}
+
+/* 筋トレテーブル装飾 */
+.table-container {
+    overflow-x: auto;
+}
+
+.workout-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.workout-table th, .workout-table td {
+    padding: 14px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.workout-table th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.workout-table tbody th {
+    background-color: #f1f5f9;
+    color: #334155;
+}
+
+/* 種目バッジ（カラー分類） */
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.tag.blue { background-color: #dbeafe; color: #1e40af; }   /* 胸・腕 */
+.tag.green { background-color: #d1fae5; color: #065f46; }  /* 背中・肩 */
+.tag.orange { background-color: #fef3c7; color: #92400e; } /* 腕・足 */
+
+/* --- 【index.html】動画カード＆レスポンシブ埋め込み --- */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.media-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9比率を保持 */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 40px;
+}
